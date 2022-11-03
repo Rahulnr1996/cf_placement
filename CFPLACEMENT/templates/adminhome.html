@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="position:absolute; top:150px; bottom: 130px;">
+
+    <div class="row row-cols-1 row-cols-md-3 g-8">
+       
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'students.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="#">STUDENTS</a></h5>
+              <p class="card-text"><a href="/Admin/reg">Register Here</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'company.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a href="/madmin/mdetails">COMPANIES</a></h5><br><br>
+                <p class="card-text"><a href="#"></a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'interview.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#">INTERVIEWS</a></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card">
+              <img src="{% static 'tests.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">SCHEDULE TESTS</a></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          
+    </div>
+</div>
+
+
+
+{% endblock %}

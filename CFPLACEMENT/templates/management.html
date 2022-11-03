@@ -1,0 +1,48 @@
+ {% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+<div class="container-fluid" style="position:absolute; top:150px; bottom: 130px;">
+
+<h1>welcome</h1>
+<body>
+    <h5 style>
+        ADD DETAILS
+    </h1>
+    <form action="/madmin/mdetails"method="post">
+        {% csrf_token %}
+    <table border="5px" class="table table-bordered">
+       <thead>
+        <th>College name</th>
+        <th>location</th>
+        <th>Add College</th>
+       
+
+        </thead> 
+        
+        <tbody>
+            <tr>
+                <td><input type="text"name="cn">
+                    <input type="text"name="idl"value="{{ls.id}}"hidden>
+                </td>
+                <td>
+                    <input type="text"name="lc">
+                </td>
+                <td><button type="submit"> ADD</button></td>
+                
+                              
+
+            </tr>
+            
+            
+            
+        </tbody>
+        
+
+    </table>
+    <a href="/madmin/mdetailsview">View Added List</a>
+</body>
+</html>
+</div> 
+
+{% endblock %}

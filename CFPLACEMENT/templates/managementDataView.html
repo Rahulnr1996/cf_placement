@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+
+
+
+
+<div class="container-fluid" style="position:absolute; top:150px; bottom: 130px;">
+
+    <h1>welcome</h1>
+    <body>
+        <h5 style>
+            DETAILS
+        </h1>
+        <form action="/madmin/mdetailsview"method="post">
+            {% csrf_token %}
+        <table border="5px" class="table table-bordered">
+           <thead>
+            <th>Collage name</th>
+            <th>location</th>
+            <th>Edit</th>
+            <th>Delete</th>
+           
+    
+            </thead> 
+            {% for ls in data %}
+            
+            <tbody>
+                <tr>
+                    <td>{{ls.clgname}}
+                       
+                    </td>
+                    <td>
+                        {{ls.location}}
+                    </td>
+                    <td>
+                        <button><a href="/madmin/medit?idn={{ls.id}}">Edit</a></button>
+                    </td>
+                    <td>
+                        <button><a href="/madmin/mdelete?idn={{ls.id}}">Delete</a></button>
+                    </td>
+                    
+                                  
+    
+                </tr>
+
+
+
+            </tbody>
+            {% endfor %}
+            
+    
+        </table>
+        <a href="/madmin/mdetails">To Add Collage Details</a>
+    </body>
+</div> 
+{% endblock %}

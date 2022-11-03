@@ -1,0 +1,84 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+<div class="container-fluid" style="position:absolute; top:150px; bottom: 130px;">
+
+    <div class="row row-cols-1 row-cols-md-3 g-8">
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'hr.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="#">HR SECTION</a></h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'aptitude.avif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="#"> APTITUDE SECTION</a></h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'interview.jfif' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="#">CONDUCTING INTERVIEWS</a></h5>
+              <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'company.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+              <h5 class="card-title"><a href="/madmin/companyadd">ADD COMPANIES</a></h5>
+              <p class="card-text"><a href="/madmin/companydata">Added Lists</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'college.png' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a href="/madmin/mdetails">ADD COLLAGES</a></h5><br><br>
+                <p class="card-text"><a href="/madmin/mdetailsview">Added List</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card">
+            <img src="{% static 'feedback.jpg' %}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title"><a href="#">FEEDBACK MANAGEMENT</a></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+            <div class="card">
+              <img src="{% static 'placementreport.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">PLACEMENT REPORT</a></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="card">
+              <img src="{% static 'schedulinginterviews.png' %}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><a href="#">SCHEDULING INTERVIEWS</a></h5>
+                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+              </div>
+            </div>
+          </div>
+    </div>
+</div>
+
+
+
+{% endblock %}

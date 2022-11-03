@@ -1,0 +1,84 @@
+def detail(request):
+    obj=regform.objects.all()
+    return render(request,"details.html",{"data":obj})
+
+#.......................................................................
+
+def edit(request):
+    idno=request.GET.get('idn')
+    obj=regform.objects.filter(id=idno)
+    return render(request,"detail2.html",{"data":obj})
+
+def update(request):
+    if request.method=="POST":
+        idn=request.POST.get("idl")
+        bnm=request.POST.get("bn")
+        aut=request.POST.get("au")
+        dis=request.POST.get("di")
+        price=request.POST.get("pi")
+        obj=regform.objects.get(id=idn)
+        obj.book=bnm
+        obj.author=aut
+        obj.disc=dis
+        obj.price=price
+        obj.save()
+        return redirect("/Admin/detail")
+def delete(request):
+    idno=request.GET.get('idn')
+    obj=regform.objects.filter(id=idno) 
+    obj.delete()
+    return redirect("/Admin/detail")  
+
+
+
+
+
+
+
+
+
+
+
+
+
+    .......................................
+    <body class="container">
+        <h5 style>
+            DETAILS
+        </h1>
+        <form action="update"method="post">
+            {% csrf_token %}
+        <table border="5px">
+           <thead>
+            <th>Book Name</th>
+            <th>Author</th>
+            <th>Description</th>
+            <th>Price</th>
+            <th>update</th>
+    
+            </thead> 
+            {% for ls in data %}
+            <tbody>
+                <tr>
+                    <td>
+                        <input type="text"name="bn"value="{{ls.book}}">
+                        <input type="text"name="idl"value="{{ls.id}}"hidden>
+                    </td>
+                    <td><input type="text"name="au"value="{{ls.author}}"></td>
+                    <td><input type="text"name="di"value="{{ls.disc}}"></td>
+                    <td><input type="text"name="pi"value="{{ls.price}}"></td>
+                    <td><button type="submit" class="btn btn-success btn-block">Submit</button></td>
+    
+                </tr>
+            </tbody>
+            {% endfor %}
+    
+        </table>
+    </body>
+    </html>
+
+
+
+
+
+    
